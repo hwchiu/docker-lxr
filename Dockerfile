@@ -23,11 +23,13 @@ RUN apt-get update && \
 
 WORKDIR /glimpse
 RUN git clone https://github.com/gvelez17/glimpse &&\
-cd glimpse 
+cd glimpse &&\
 ./configure &&\
 make &&\
 make install
 
-#set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
-#set termencoding=utf-8
-#set encoding=utf-8
+WORKDIR /
+RUN apt-get install -y curl &&\
+	curl -L https://sourceforge.net/projects/lxr/files/stable/lxr-2.2.1.tgz > lxr.tgz &&\
+	tar -xvf lxr.tgz &&\
+	mv lxr-2.2.1 lxr
