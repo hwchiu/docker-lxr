@@ -1,0 +1,5 @@
+[extensions]
+lxr-ext = /lxr/custom.d/hg-lxr-ext.py
+
+[trusted]
+users = 

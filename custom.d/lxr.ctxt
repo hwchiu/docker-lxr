@@ -1,0 +1,25 @@
+# -*- mode: perl -*-
+# Context file associated with lxr.conf
+# Created 2017-06-03 03:15:20 UTC
+# Strictly internal, do not play with content
+$context_created = 4;
+
+$cardinality = 's';
+$dbpolicy = 't';
+$dbengine = 'm';
+$nodbuser = 1;
+$nodbprefix = 1;
+$servertype = 'S';
+$scheme = 'http:';
+$hostname = 'localhost';
+$port = '80';
+@schemealiases = qw( 
+                   );
+@hostaliases = qw( 
+                 );
+@portaliases = qw( 
+                 );
+$treematch = 'N';
+$commonvirtroot = 0;
+$virtrootbase = '/lxr';
+$virtrootpolicy = '';
