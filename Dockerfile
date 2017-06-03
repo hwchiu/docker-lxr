@@ -37,11 +37,13 @@ RUN apt-get install -y curl &&\
 
 WORKDIR /lxr
 ADD custom.d /lxr/custom.d
-ADD expect_initdb /lxr
-#RUN service mysql start &&\
-#./custom.d/initdb.sh &&\
-#cp ./custom.d/lxr.conf . &&\
-#mkdir /lxr/glimpse_db/lxr/master && \
-#cp custom.d/apache-lxrserver.conf  /etc/apache2/conf-available &&\
-#a2enconf apache-lxrserver.conf && \
-#service apaceh2 start
+ADD expect_initdb /lxr/expect_initdb
+RUN cp ./custom.d/lxr.conf .
+
+EXPOSE 8001
+
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+CMD ["/bin/bash"]

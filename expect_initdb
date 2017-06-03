@@ -1,0 +1,7 @@
+#!/usr/bin/expect -f
+spawn /lxr/custom.d/initdb.sh
+expect "Enter password:"
+send "lxr\r"
+expect "Enter password:"
+send "lxr\r"
+interact
