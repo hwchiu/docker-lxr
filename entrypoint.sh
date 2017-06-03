@@ -12,6 +12,9 @@ public_ip=$1
 sed -i.bak s/public_ip_address/$1/g /lxr/lxr.conf
 sed -i.bak s/public_ip_address/$1/g /lxr/custom.d/apache-lxrserver.conf
 
+cp /lxr/custom.d/apache-lxrserver.conf  /etc/apache2/conf-available
+a2enconf apache-lxrserver.conf
+
 shift 
 index=0
 while [ $# -gt 0 ]

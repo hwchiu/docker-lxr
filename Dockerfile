@@ -38,7 +38,8 @@ RUN apt-get install -y curl &&\
 WORKDIR /lxr
 ADD custom.d /lxr/custom.d
 ADD expect_initdb /lxr/expect_initdb
-RUN cp ./custom.d/lxr.conf .
+ADD custom.d/lxr.conf /lxr
+ADD .htaccess /lxr/.htaccess
 
 EXPOSE 8001
 
