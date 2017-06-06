@@ -1,4 +1,4 @@
-# lxrDocker
+# docker-lxr
 A Docker Container for LXR.
 
 LXR is a general source code indexer and cross-referencer providing web-based browsing of source code.
