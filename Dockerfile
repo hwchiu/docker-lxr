@@ -37,13 +37,13 @@ RUN apt-get install -y curl &&\
 
 WORKDIR /lxr
 ADD custom.d /lxr/custom.d
-ADD expect_initdb /lxr/expect_initdb
+ADD scripts/expect_initdb /lxr/expect_initdb
 ADD custom.d/lxr.conf /lxr
 ADD .htaccess /lxr/.htaccess
 
 EXPOSE 8001
 
-COPY entrypoint.sh /entrypoint.sh
+COPY scripts/entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 
