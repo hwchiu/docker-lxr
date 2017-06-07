@@ -35,7 +35,7 @@ drwxr-xr-x 23 root root 4.0K Jun  6 13:48 v9.2.1
 assume the public ip address is 10.2.3.4 and type the following command to pull the image and run the lxr server.
 
 ```
-docker pull hwchiu/docker-lxr:single
+docker pull hwchiu/docker-lxr
 docker run --name lxr -it -v tmp:/source   -p 800180  hwchiu/lxr:single 10.2.3.4 master v12.0.3 v9.2.1
 ```
 
