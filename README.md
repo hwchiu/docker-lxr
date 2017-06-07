@@ -36,7 +36,7 @@ assume the public ip address is 10.2.3.4 and type the following command to pull 
 
 ```
 docker pull hwchiu/docker-lxr
-docker run --name lxr -it -v tmp:/source   -p 800180  hwchiu/lxr:single 10.2.3.4 master v12.0.3 v9.2.1
+docker run --name lxr -it -v /tmp:/source   -p 800180  hwchiu/lxr:single 10.2.3.4 master v12.0.3 v9.2.1
 ```
 
 After that, open your browser and type the **10.2.3.4:8001/lxr/source** in the serach bar and you will see something like below.
