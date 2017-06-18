@@ -10,8 +10,8 @@ RUN apt-get update && \
 	apt-get install -y perl &&\
 	apt-get install -y git &&\
 	apt-get install -y exuberant-ctags &&\
-    apt-get install -y mysql-server &&\
-    apt-get install -y apache2 &&\
+    	apt-get install -y mysql-server &&\
+    	apt-get install -y apache2 &&\
 	apt-get install -y libapache2-mod-perl2 &&\
 	apt-get install -y libmysqlclient-dev &&\
 	apt-get install -y gcc &&\
